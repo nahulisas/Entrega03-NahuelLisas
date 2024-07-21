@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="titulo">
+                <h1>coderShop</h1>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li class="item_menu" id="todos_los_productos">
+                        <i class="bi bi-hand-index-thumb-fill"></i>Todos los
+                        Productos
+                    </li>
+                    <li class="item_menu" id="camperas">
+                        <i class="bi bi-hand-index-thumb-fill"></i>Camperas
+                    </li>
+                    <li class="item_menu" id="pantalones">
+                        <i class="bi bi-hand-index-thumb-fill"></i>Pantalones
+                    </li>
+                    <li class="item_menu" id="remeras">
+                        <i class="bi bi-hand-index-thumb-fill"></i>Remeras
+                    </li>
+                    <li class="item_menu" id="zapatillas">
+                        <i class="bi bi-hand-index-thumb-fill"></i>Zapatillas
+                    </li>
+                </ul>
+            </nav>
+            <div class="admin">
+                <div class="carrito">
+                    <i class="bi bi-cart"></i>
+                    <span class="contador">0</span>
+                </div>
+                <div class="login">
+                    <a href="">Log In</a>
+                </div>
+            </div>
+        </header>
+        <main class="contenedor">
+            <h3 class="subtitulo">Todos los productos</h3>
+            <button id="drop_form">Crear Nuevo Producto</button>
+            <div class="form_container">
+                <form action="" class="hidden" id="form">
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Nombre del producto"
+                    />
+                    <input
+                        type="number"
+                        name="precio"
+                        id="precio"
+                        placeholder="Precio del producto"
+                    />
+                    <select name="" id="descripcion">
+                        <option value="1 pago sin interes">
+                            Hasta en 1 pago sin interes
+                        </option>
+                        <option value="3 cuotas sin intees">
+                            Hasta en 3 cuotas sin intees
+                        </option>
+                        <option value="6 cuotas sin interes">
+                            Hasta en 6 cuotas sin interes
+                        </option>
+                        <option value="12 cuptas sin interes">
+                            Hasta en 12 cuotas sin interes
+                        </option>
+                    </select>
+                    <select name="" id="categoria">
+                        <option value="remeras">remera</option>
+                        <option value="camperas">campera</option>
+                        <option value="pantalones">pantalon</option>
+                        <option value="zapatillas">zapatilla</option>
+                    </select>
+                    <button type="submit" id="agregar_producto">
+                        Agregar producto
+                    </button>
+                </form>
+            </div>
+            <div class="product_container">
+                <!-- <div class="product_card">
+                    <div class="product_card_img">
+                        <i class="bi bi-image"></i>
+                    </div>
+                    <div class="product_card_info">
+                        <div class="product_card_title">Producto</div>
+                        <div class="product_card_price">$Price</div>
+                        <div class="product_card_description">
+                            Product Description
+                        </div>
+                        <div class="btn-agregar-carro">
+                            <a href="">Agregar</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </main>
+    </body>
+    <script src="./script.js"></script>
+</html>
