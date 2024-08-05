@@ -18,78 +18,117 @@
     --white: #fff;
 }
 
-body {
-    display: flex;
-    background-color: var(--main-color);
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
+
+/********** HEADER **********/
 
 .header {
-    width: 400px;
-    height: 100vh;
-    background-color: var(--main-color);
-}
-
-.contenedor {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-content: center;
-    padding: 50px;
-    margin: 30px 30px 0px 0px;
-    border-radius: 30px 30px 0 0;
-    background-color: #fff;
-}
-
-.contenedor h3 {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: var(--darkness-blue);
-    display: block;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.nav-bar ul {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0;
-    align-items: flex-end;
-    gap: 20px;
-}
-
-.nav-bar ul li {
     display: flex;
     align-items: center;
-    width: 80%;
-    border-radius: 10px 0 0 10px;
-    color: white;
-    gap: 15px;
-    padding: 15px;
+    background-color: #006494;
+    width: 100%;
+    height: 100px;
+}
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    display: flex;
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+}
+
+.header .title {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin-right: 50px;
+    color: var(--white);
+}
+
+.admin {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+
+.admin .login_btn {
+    background-color: white;
+    padding: 8px 30px;
+    border-radius: 10px;
+    color: #00a6fb;
     cursor: pointer;
 }
 
-.nav-bar ul li:hover {
-    background-color: white;
-    color: var(--main-color);
-    transition: all 0.3s ease;
+/********** MENU **********/
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
 }
 
-li i {
-    transform: rotate(90deg);
+.nav span {
+    margin-right: 10px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item_menu a,
+.item_menu {
+    color: #a4a4a4;
+    position: relative;
+    cursor: pointer;
+}
+
+.item_menu a:hover::before,
+.item_menu:hover::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #a4a4a4;
+    width: 100%;
+    bottom: -5px;
+}
+
+/********** MAIN **********/
+
+.container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--darkness-blue);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .product_container {
     display: flex;
+    min-height: 100vh;
     flex-wrap: wrap;
-    gap: 5px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .product_card {
     width: 399px;
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
+    margin: 0 10px;
 }
 
 .product_card_img {
@@ -113,7 +152,7 @@ li i {
     font-size: 1.5rem;
 }
 
-.btn-agregar-carro a {
+.btn-agregar-carro {
     background-color: var(--white);
     padding: 12px;
     text-align: center;
@@ -121,13 +160,16 @@ li i {
     color: var(--dark-blue);
     border-radius: 30px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
-.btn-agregar-carro a:hover {
+.btn-agregar-carro:hover {
     background-color: var(--dark-blue);
     color: var(--white);
     transition: all 0.2s ease;
 }
+
+/********** AGREGAR PRODUCTOS FORM **********/
 
 #drop_form {
     width: 200px;
@@ -136,18 +178,14 @@ li i {
     border: none;
     color: white;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 10px 0;
-}
-
-form input,
-form select {
-    width: 300px;
+    margin: 10px;
 }
 
 form #agregar_producto {
@@ -162,13 +200,242 @@ form #agregar_producto {
 .form_container {
     overflow: hidden;
     max-height: 0;
-    transition: 0.1s ease;
+    transition: all 0.1s ease;
 }
 .hidden {
     max-height: 1000px;
-    transition: 1s ease;
+    transition: all 1s ease;
 }
 
 .filter {
     overflow: hidden;
+}
+
+/********** CARRITO **********/
+
+#carrito_container {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.carrito a {
+    background-color: white;
+    padding: 8px 30px;
+    border-radius: 10px;
+    color: #00a6fb;
+    cursor: pointer;
+}
+
+.carrito_item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.eliminar_producto {
+    border: none;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.eliminar_producto:hover {
+    border-color: red;
+    background-color: red;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.item_box {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modificar_cantidad {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+#restar_cantidad,
+#sumar_cantidad {
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.enable {
+    color: lightgrey;
+}
+
+.vaciar_carrito {
+    background-color: red;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: none;
+}
+
+.vaciar_carrito:hover {
+    color: lightgrey;
+}
+
+/********* FORMULARIO ***********/
+
+.formularios {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: -1;
+}
+
+.mostrar {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    z-index: 1000;
+    position: fixed;
+}
+
+.signup_form {
+    display: none;
+}
+
+.formularios.active .signup_form {
+    display: block;
+}
+
+.formularios.active .login_form {
+    display: none;
+}
+
+.form_login_container {
+    position: absolute;
+    max-width: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0px 0px 100px 1000px rgba(0, 0, 0, 0.5);
+    /* display: none; */
+}
+
+.form_close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.form_login_container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.input_box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.input_box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    border-bottom: 1.5px solid #aaaaaa;
+}
+
+.input_box input:focus {
+    border-color: var(--medium-blue);
+}
+
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password {
+    color: var(--medium-blue);
+}
+
+.input_box i {
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaaaaa;
+}
+
+.input_box i.email,
+.input_box i.password {
+    left: 0;
+}
+
+.form_login_container a {
+    color: #006494;
+}
+
+.form_login_container a:hover {
+    text-decoration: underline;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox {
+    display: flex;
+    white-space: nowrap;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.checkbox input {
+    accent-color: var(--main-color);
+}
+
+.checkbox label,
+.checkbox input {
+    cursor: pointer;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #006494;
+    color: white;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #003554;
+    transition: all 0.3s ease;
+}
+
+.iniciar_secion {
+    text-align: center;
 }

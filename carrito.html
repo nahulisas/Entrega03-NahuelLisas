@@ -11,7 +11,6 @@
         <title>Document</title>
     </head>
     <body>
-        <!-- HEADER -->
         <header class="header">
             <div class="header_top container">
                 <a class="title" href="./index.html">coderShop</a>
@@ -27,78 +26,20 @@
                             >Log In</a
                         >
                     </div>
-                    <!-- <div class="sign">
-                        <a class="admin_btn sign_btn" href="">Sign In</a>
-                    </div> -->
                 </div>
             </div>
         </header>
-        <!-- BANNER -->
-        <div class="banner">
-            <img src="./imagenes/banner.jpg" alt="" />
-        </div>
-        <!-- CONTENIDO -->
+
         <main class="container">
-            <!-- MENU FILTER -->
-            <div class="nav">
-                <span>Filtrar por: </span>
-                <nav class="nav-bar">
-                    <ul>
-                        <li class="item_menu" id="todos_los_productos">
-                            Todos los Productos
-                        </li>
-                        <li class="item_menu" id="camperas">Camperas</li>
-                        <li class="item_menu" id="pantalones">Pantalones</li>
-                        <li class="item_menu" id="remeras">Remeras</li>
-                        <li class="item_menu" id="zapatillas">Zapatillas</li>
-                    </ul>
-                </nav>
-            </div>
-            <h3 class="subtitulo">Todos los productos</h3>
-            <!-- FORMULARIO -->
-            <button id="drop_form">Crear Nuevo Producto</button>
-            <div class="form_container">
-                <form action="" class="hidden" id="form">
-                    <input
-                        type="text"
-                        id="nombre"
-                        placeholder="Nombre del producto"
-                        required
-                    />
-                    <input
-                        type="number"
-                        name="precio"
-                        id="precio"
-                        placeholder="Precio del producto"
-                        required
-                    />
-                    <select name="" id="descripcion">
-                        <option value="1 pago sin interes">
-                            Hasta en 1 pago sin interes
-                        </option>
-                        <option value="3 cuotas sin intees">
-                            Hasta en 3 cuotas sin intees
-                        </option>
-                        <option value="6 cuotas sin interes">
-                            Hasta en 6 cuotas sin interes
-                        </option>
-                        <option value="12 cuptas sin interes">
-                            Hasta en 12 cuotas sin interes
-                        </option>
-                    </select>
-                    <select name="" id="categoria">
-                        <option value="remeras">remera</option>
-                        <option value="camperas">campera</option>
-                        <option value="pantalones">pantalon</option>
-                        <option value="zapatillas">zapatilla</option>
-                    </select>
-                    <button type="button" id="agregar_producto">
-                        Agregar producto
-                    </button>
-                </form>
-            </div>
-            <!-- CONTENEDOR DE PRODUCTOS -->
-            <div class="product_container"></div>
+            <h3 class="subtitulo">Carrito</h3>
+            <nav class="nav nav-bar">
+                <ul>
+                    <li class="item_menu" id="todos_los_productos">
+                        <a href="./index.html">Volver a la tienda</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="carrito_container"></div>
             <!-- FORMULARIOS -->
             <div class="formularios">
                 <!-- Login Form -->
@@ -132,7 +73,7 @@
                                 >Olvido su contraseña?</a
                             >
                         </div>
-                        <button id="ingresarBtn" type="button">Ingresar</button>
+                        <button type="button">Ingresar</button>
                         <div class="iniciar_secion">
                             No tiene cuenta?
                             <a href="#" id="signup_btn">Registrese ahora</a>
@@ -181,6 +122,6 @@
             </div>
         </main>
     </body>
-    <script src="./script.js"></script>
+    <script src="./carrito.js"></script>
     <script src="./form.js"></script>
 </html>
