@@ -1,22 +1,7 @@
-
 let openFormBtn = document.querySelector('#openFormBtn')
 let signUpBtn = document.querySelector('#signup_btn')
 let loginBtn = document.querySelector('#loginBtn')
 let formularios = document.querySelector('.formularios')
-let ingresarBtn = document.querySelector('#ingresarBtn')
-console.log(ingresarBtn);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -38,6 +23,12 @@ signUpBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     formularios.classList.remove('active')
 })
+
+
+
+
+
+
 
 
 

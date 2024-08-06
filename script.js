@@ -1,35 +1,35 @@
 // Arrays
-// let misProductos = JSON.parse(localStorage.getItem('misProductos')) || []
-let misProductos = [
-    {
-        nombre: "Remera",
-        precio: Number(1500),
-        descripcion: 'El mejor',
-        categoria: "remeras",
-        id: 1,
-    },
-    {
-        nombre: "Campera",
-        precio: Number(4500),
-        descripcion: 'La mas abrigada',
-        categoria: "camperas",
-        id: 2,
-    },
-    {
-        nombre: "Pantalon",
-        precio: Number(3799),
-        descripcion: 'El mas mejor',
-        categoria: "pantalones",
-        id: 3,
-    },
-    {
-        nombre: "Zapatilla",
-        precio: Number(10000),
-        descripcion: 'La mas comoda',
-        categoria: "zapatillas",
-        id: 4,
-    }
-]
+let misProductos = JSON.parse(localStorage.getItem('misProductos')) || []
+// let misProductos = [
+//     {
+//         nombre: "Remera",
+//         precio: Number(1500),
+//         descripcion: 'El mejor',
+//         categoria: "remeras",
+//         id: 1,
+//     },
+//     {
+//         nombre: "Campera",
+//         precio: Number(4500),
+//         descripcion: 'La mas abrigada',
+//         categoria: "camperas",
+//         id: 2,
+//     },
+//     {
+//         nombre: "Pantalon",
+//         precio: Number(3799),
+//         descripcion: 'El mas mejor',
+//         categoria: "pantalones",
+//         id: 3,
+//     },
+//     {
+//         nombre: "Zapatilla",
+//         precio: Number(10000),
+//         descripcion: 'La mas comoda',
+//         categoria: "zapatillas",
+//         id: 4,
+//     }
+// ]
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 // Objetos del DOM
@@ -49,6 +49,7 @@ contadorCarrito.innerText = carrito.length
 
 // Agregar productos a mi Array de productos
 
+let id = 0
 
 let agregar_producto = () => {
 
