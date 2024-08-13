@@ -40,7 +40,18 @@
         <!-- CONTENIDO -->
         <main class="container">
             <!-- MENU FILTER -->
-            <div class="nav">
+            <div class="filter">
+                <div class="input_box">
+                    <input
+                        class="input_search"
+                        id="input_search"
+                        type="text"
+                        placeholder="Busca tus productos favoritos..."
+                    />
+                    <i class="bi bi-search search"></i>
+                </div>
+            </div>
+            <!-- <div class="nav">
                 <span>Filtrar por: </span>
                 <nav class="nav-bar">
                     <ul>
@@ -53,52 +64,12 @@
                         <li class="item_menu" id="zapatillas">Zapatillas</li>
                     </ul>
                 </nav>
-            </div>
+            </div> -->
             <h3 class="subtitulo">Todos los productos</h3>
-            <!-- FORMULARIO -->
-            <button id="drop_form">Crear Nuevo Producto</button>
-            <div class="form_container">
-                <form action="" class="hidden" id="form">
-                    <input
-                        type="text"
-                        id="nombre"
-                        placeholder="Nombre del producto"
-                        required
-                    />
-                    <input
-                        type="number"
-                        name="precio"
-                        id="precio"
-                        placeholder="Precio del producto"
-                        required
-                    />
-                    <select name="" id="descripcion">
-                        <option value="1 pago sin interes">
-                            Hasta en 1 pago sin interes
-                        </option>
-                        <option value="3 cuotas sin intees">
-                            Hasta en 3 cuotas sin intees
-                        </option>
-                        <option value="6 cuotas sin interes">
-                            Hasta en 6 cuotas sin interes
-                        </option>
-                        <option value="12 cuptas sin interes">
-                            Hasta en 12 cuotas sin interes
-                        </option>
-                    </select>
-                    <select name="" id="categoria">
-                        <option value="remeras">remera</option>
-                        <option value="camperas">campera</option>
-                        <option value="pantalones">pantalon</option>
-                        <option value="zapatillas">zapatilla</option>
-                    </select>
-                    <button type="button" id="agregar_producto">
-                        Agregar producto
-                    </button>
-                </form>
-            </div>
             <!-- CONTENEDOR DE PRODUCTOS -->
-            <div class="product_container"></div>
+            <div class="product_container">
+                <img src="" alt="" srcset="" />
+            </div>
             <!-- FORMULARIOS -->
             <div class="formularios">
                 <!-- Login Form -->
@@ -189,4 +160,5 @@
     </body>
     <script src="./script.js"></script>
     <script src="./form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

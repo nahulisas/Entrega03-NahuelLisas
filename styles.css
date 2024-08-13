@@ -20,17 +20,22 @@
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 /********** HEADER **********/
-
+body {
+    position: relative;
+}
 .header {
     display: flex;
+    position: fixed;
     align-items: center;
     background-color: #006494;
     width: 100%;
     height: 100px;
+    top: 0;
+    z-index: 1000;
 }
 
 .header_top {
@@ -39,7 +44,9 @@
 }
 
 .banner {
+    margin-top: 100px;
     position: relative;
+    z-index: -1;
 }
 
 .banner img {
@@ -78,7 +85,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0px;
 }
 
 .nav span {
@@ -128,39 +134,71 @@ nav ul {
     width: 399px;
     display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    justify-content: space-between;
+    margin: 10px 10px;
+    position: relative;
 }
 
 .product_card_img {
     width: 400px;
-    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(244, 244, 244);
 }
 
+.product_card_img img {
+    width: 100%;
+}
+
 .product_card_info {
     display: flex;
+    height: 100px;
     flex-direction: column;
     padding: 10px;
     gap: 5px;
+    flex-grow: 1;
 }
 
 .product_card_title,
 .product_card_price {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.agregar-carro-box {
+    position: relative;
 }
 
 .btn-agregar-carro {
     background-color: var(--white);
     padding: 12px;
+    width: 100%;
     text-align: center;
     display: block;
+    align-self: flex-end;
+    justify-content: center;
     color: var(--dark-blue);
     border-radius: 30px;
-    margin-top: 20px;
+    margin-top: auto;
     cursor: pointer;
+}
+
+.on_cart_icon {
+    position: absolute;
+    display: none;
+    color: var(--darkness-blue);
+    right: 35%;
+    top: 25%;
+    cursor: pointer;
+}
+
+.btn-agregar-carro:hover ~ .on_cart_icon {
+    color: white;
+}
+
+.product_card.on_cart .on_cart_icon {
+    display: block;
 }
 
 .btn-agregar-carro:hover {
@@ -169,53 +207,11 @@ nav ul {
     transition: all 0.2s ease;
 }
 
-/********** AGREGAR PRODUCTOS FORM **********/
-
-#drop_form {
-    width: 200px;
-    padding: 10px;
-    background-color: #006494;
-    border: none;
-    color: white;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px;
-}
-
-form #agregar_producto {
-    width: 300px;
-    background-color: #006494;
-    padding: 2px;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-}
-
-.form_container {
-    overflow: hidden;
-    max-height: 0;
-    transition: all 0.1s ease;
-}
-.hidden {
-    max-height: 1000px;
-    transition: all 1s ease;
-}
-
-.filter {
-    overflow: hidden;
-}
-
 /********** CARRITO **********/
 
 #carrito_container {
-    width: 40%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 60px auto;
     display: flex;
     flex-direction: column;
 }
@@ -257,16 +253,31 @@ form #agregar_producto {
 .item_box {
     display: flex;
     flex: 1;
+    align-items: center;
+}
+
+.item_box:nth-last-of-type(1) {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.item_box img {
+    width: 10%;
+    margin-right: 5px;
+}
+
 .modificar_cantidad {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
     gap: 20px;
     border-radius: 10px;
+}
+
+.cantidad {
+    width: 40px;
+    text-align: center;
 }
 
 #restar_cantidad,
@@ -398,6 +409,7 @@ form #agregar_producto {
 }
 
 .opciones {
+    margin: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -438,4 +450,24 @@ form #agregar_producto {
 
 .iniciar_secion {
     text-align: center;
+}
+
+/********* SEARCH INPUT ***********/
+
+.input_box {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+}
+.input_box .input_search {
+    border: 1px solid;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.input_box i.search {
+    position: absolute;
+    right: 10px;
 }
