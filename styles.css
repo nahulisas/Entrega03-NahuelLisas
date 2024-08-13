@@ -454,7 +454,7 @@ nav ul {
 
 /********* SEARCH INPUT ***********/
 
-.input_box {
+.input_box_search {
     display: flex;
     justify-content: center;
     width: 500px;
