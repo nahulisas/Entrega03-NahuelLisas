@@ -458,16 +458,31 @@ nav ul {
     display: flex;
     justify-content: center;
     width: 500px;
+    height: 40px;
     margin: 0 auto;
+    position: relative;
 }
+
 .input_box_search .input_search {
-    border: 1px solid;
+    border: 1px #aaaaaa solid;
     width: 100%;
+    padding: 10px;
     border-radius: 10px;
     position: relative;
+    outline: none;
+}
+.input_box_search .input_search:focus {
+    border-color: var(--main-color);
+}
+
+.input_box_search .input_search:focus ~ i.search {
+    color: var(--main-color);
 }
 
 .input_box_search i.search {
     position: absolute;
     right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaaaaa;
 }
