@@ -460,14 +460,14 @@ nav ul {
     width: 500px;
     margin: 0 auto;
 }
-.input_box .input_search {
+.input_box_search .input_search {
     border: 1px solid;
     width: 100%;
     border-radius: 10px;
     position: relative;
 }
 
-.input_box i.search {
+.input_box_search i.search {
     position: absolute;
     right: 10px;
 }
