@@ -4,9 +4,14 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 :root {
@@ -124,49 +129,29 @@ nav ul {
 }
 
 .product_container {
+    gap: 40px 0;
+}
+
+.col {
     display: flex;
-    min-height: 100vh;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
-.product_card {
-    width: 399px;
+.card {
+    border: none;
+}
+
+.card.on_cart .on_cart_icon {
+    display: block;
+}
+
+.card img {
+    flex-flow: 1;
+}
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 10px 10px;
-    position: relative;
-}
-
-.product_card_img {
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(244, 244, 244);
-}
-
-.product_card_img img {
-    width: 100%;
-}
-
-.product_card_info {
-    display: flex;
-    height: 100px;
-    flex-direction: column;
-    padding: 10px;
-    gap: 5px;
-    flex-grow: 1;
-}
-
-.product_card_title,
-.product_card_price {
-    font-size: 1.2rem;
-    font-weight: lighter;
-}
-
-.agregar-carro-box {
     position: relative;
 }
 
@@ -174,27 +159,21 @@ nav ul {
     background-color: var(--white);
     padding: 12px;
     width: 100%;
-    text-align: center;
-    display: block;
-    align-self: flex-end;
+    display: flex;
     justify-content: center;
+    gap: 5px;
     color: var(--dark-blue);
-    border-radius: 30px;
-    margin-top: auto;
+    border-radius: 15px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .on_cart_icon {
-    position: absolute;
     display: none;
     color: var(--darkness-blue);
-    right: 35%;
-    top: 25%;
     cursor: pointer;
-}
-
-.btn-agregar-carro:hover ~ .on_cart_icon {
-    color: white;
+    right: 37%;
+    bottom: 17%;
 }
 
 .product_card.on_cart .on_cart_icon {
@@ -207,6 +186,10 @@ nav ul {
     transition: all 0.2s ease;
 }
 
+.btn-agregar-carro:hover .on_cart_icon {
+    color: white;
+    transition: all 0.2s ease;
+}
 /********** CARRITO **********/
 
 #carrito_container {
