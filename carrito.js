@@ -9,13 +9,13 @@ let injectarProductos = (array) => {
     carritoContainer.innerHTML = ''
     array.forEach(elemento => {
         let producto = document.createElement('div')
+        producto.classList.add('row')
         producto.innerHTML = `
-            <div class="carrito_item">
-                    <div class="item_box">
+                    <div class="col col-lg-9 justify-content-start">
                         <img src="${elemento.images}" alt="imagen" />
                         <p>${elemento.title}</p>
                     </div>
-                    <div class="item_box">
+                    <div class="col col-lg-3 justify-content-around">
                         <div class="modificar_cantidad">
                             <button onclick="restarCantidad(${elemento.id})" id="restar_cantidad">
                                 <i class="bi bi-dash"></i>
@@ -30,7 +30,7 @@ let injectarProductos = (array) => {
                             <i class="bi bi-trash"></i>
                         </button>
                     </div>
-                </div>
+                
         `
 
         carritoContainer.appendChild(producto)

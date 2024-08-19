@@ -108,15 +108,6 @@ nav ul {
     cursor: pointer;
 }
 
-.item_menu a:hover::before,
-.item_menu:hover::before {
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid #a4a4a4;
-    width: 100%;
-    bottom: -5px;
-}
-
 /********** MAIN **********/
 
 .container h3 {
@@ -132,7 +123,7 @@ nav ul {
     gap: 40px 0;
 }
 
-.col {
+.product_container .col {
     display: flex;
     justify-content: center;
 }
@@ -192,11 +183,27 @@ nav ul {
 }
 /********** CARRITO **********/
 
-#carrito_container {
-    width: 60%;
-    margin: 60px auto;
+.carrito .row {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carrito .row:hover {
+    background-color: #aaaaaa1c;
+}
+.carrito .col {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.carrito img {
+    width: 70px;
+}
+
+.carrito p {
+    margin: 0;
+    padding: 0;
 }
 
 .carrito a {
@@ -207,47 +214,13 @@ nav ul {
     cursor: pointer;
 }
 
-.carrito_item {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 30px 0;
-}
-
 .eliminar_producto {
     border: none;
     background-color: transparent;
-    border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
     color: black;
     cursor: pointer;
-}
-
-.eliminar_producto:hover {
-    border-color: red;
-    background-color: red;
-    color: white;
-    transition: all 0.2s ease;
-}
-
-.item_box {
-    display: flex;
-    flex: 1;
-    align-items: center;
-}
-
-.item_box:nth-last-of-type(1) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.item_box img {
-    width: 10%;
-    margin-right: 5px;
 }
 
 .modificar_cantidad {
@@ -258,9 +231,21 @@ nav ul {
     border-radius: 10px;
 }
 
+.total {
+    width: 20px;
+}
+
 .cantidad {
-    width: 40px;
+    width: 10px;
     text-align: center;
+}
+
+@media screen and (width < 762px) {
+    .carrito .row {
+        border-bottom: 1px solid black;
+        padding: 30px;
+        width: 100%;
+    }
 }
 
 #restar_cantidad,
@@ -440,7 +425,7 @@ nav ul {
 .input_box_search {
     display: flex;
     justify-content: center;
-    width: 500px;
+    width: 100%;
     height: 40px;
     margin: 0 auto;
     position: relative;
@@ -454,6 +439,13 @@ nav ul {
     position: relative;
     outline: none;
 }
+
+@media screen and (width > 1024px) {
+    .input_box_search {
+        width: 50%;
+    }
+}
+
 .input_box_search .input_search:focus {
     border-color: var(--main-color);
 }

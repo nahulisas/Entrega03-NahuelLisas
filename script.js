@@ -38,7 +38,7 @@ let injectarProductos = (array) => {
 
         let buscarEnElCarrito = carrito.find(item => item.id == elemento.id)
         let producto = document.createElement('div')
-        producto.classList.add("col", "col-lg-4",)
+        producto.classList.add("col", "col-lg-3", "col-md-4", "col-sm-6")
 
         if (buscarEnElCarrito) {
 
